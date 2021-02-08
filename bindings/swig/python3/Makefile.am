@@ -29,7 +29,7 @@ PYTHON = $(PYTHON3)
 py3exec_PYTHON = audit.py
 py3exec_LTLIBRARIES = _audit.la
 py3exec_SOLIBRARIES = _audit.so
-_audit_la_CFLAGS = -shared
+_audit_la_CFLAGS = -static
 _audit_la_LDFLAGS = -module -avoid-version -Wl,-z,relro
 _audit_la_HEADERS: $(top_builddir)/config.h 
 _audit_la_DEPENDENCIES =${top_srcdir}/lib/libaudit.h ${top_builddir}/lib/libaudit.la
